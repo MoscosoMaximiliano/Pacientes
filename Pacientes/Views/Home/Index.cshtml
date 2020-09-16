@@ -1,0 +1,19 @@
+﻿@model List<Pacientes.Models.Paciente>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Lista de Pacientes</h2>
+@Html.Partial("Partials/ListaPacientes", Model)
+	
+
+<script type="text/javascript">
+	function eliminar(id) {
+		$('#' + id).remove();
+	}
+
+	function editar(id) {
+		$('#' + id + 'td[name=address]').text('Domicilio Nuevo #' + id);
+	}
+</script>
